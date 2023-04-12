@@ -1,0 +1,269 @@
+    body {
+        --theme: #f2d078;
+        --secondary: #51462a;
+        --selection: #05050559;
+        --background: #050505;
+        --text: white;
+        --text-inverse: black;
+        background: var(--background);
+        margin: 0;
+        padding: 0;
+        overscroll-behavior: none;
+    }
+
+    body * {
+        color: var(--text);
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+    }
+
+    body::-webkit-scrollbar {
+        width: 16px;
+        background: var(--background);
+    }
+
+    body::-webkit-scrollbar-thumb {
+        height: 56px;
+        border-radius: 8px;
+        border: 4px solid transparent;
+        background-clip: content-box;
+        background-color: var(--theme);
+    }
+
+    .textarea::-webkit-scrollbar {
+        width: 16px;
+        background: transparent;
+    }
+
+    .textarea::-webkit-scrollbar-thumb {
+        height: 56px;
+        border-radius: 8px;
+        border: 4px solid transparent;
+        background-clip: content-box;
+        background-color: var(--secondary);
+    }
+
+    ::placeholder {
+        color: var(--secondary);
+        user-select: none;
+    }
+
+    ::selection {
+        background: var(--selection);
+    }
+
+    .material-symbols-outlined {
+        font-family: "Material Icons";
+    }
+
+    .title {
+        font-size: 40px;
+        font-weight: 500;
+        text-align: center;
+        user-select: none;
+        margin-top: 1rem;
+    }
+
+    .letter {
+        display: inline-block;
+        transform-origin: bottom;
+        white-space: pre-wrap;
+        transition: transform 300ms;
+    }
+
+    .letter:hover {
+        transform: scale(1.5);
+    }
+
+    .main {
+        display: flex;
+        gap: 2rem;
+        padding: 2rem;
+    }
+
+    .sectionTitle {
+        font-size: 25px;
+        font-weight: 500;
+        user-select: none;
+        margin-right: auto;
+        width: 100%;
+    }
+
+    .maker {
+        background: var(--secondary);
+        border-radius: 24px;
+        padding: 20px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        flex-wrap: wrap;
+        flex-direction: column;
+        max-width: calc(50% - 3.5rem);
+    }
+
+    .result {
+        background: var(--secondary);
+        border-radius: 24px;
+        padding: 20px;
+        display: flex;
+        gap: 20px;
+        flex-wrap: wrap;
+        height: fit-content;
+        width: 100%;
+        max-width: calc(50% - 3.5rem);
+    }
+
+    .resultButton {
+        background: var(--theme);
+        height: 3rem;
+        font-size: 16px;
+        border: none;
+        border-radius: 6px;
+        outline: none;
+        cursor: pointer;
+        user-select: none;
+        display: inline-flex;
+        align-items: center;
+        text-decoration: none;
+        padding: 0 1rem;
+        position: relative;
+        max-width: -webkit-fill-available;
+        overflow: hidden;
+    }
+
+    .resultButton .resultButtonText {
+        color: var(--text-inverse);
+    }
+
+    .resultLink {
+        opacity: 0;
+        user-select: none;
+        height: 100%;
+        width: 100%;
+        padding: 0 1rem;
+        border-radius: 6px;
+        position: absolute;
+        right: 0;
+        left: 0;
+        top: 0;
+        bottom: 0;
+    }
+
+    .text-input {
+        width: -webkit-fill-available;
+        background: var(--theme);
+        height: 3rem;
+        font-size: 16px;
+        border: none;
+        border-radius: 6px;
+        outline: none;
+        padding: 0 1rem;
+        color: var(--text-inverse);
+    }
+
+    .textarea {
+        width: -webkit-fill-available;
+        background: var(--theme);
+        font-size: 16px;
+        border: none;
+        border-radius: 6px;
+        outline: none;
+        padding: 1rem;
+        color: var(--text-inverse);
+        padding-top: 1rem;
+        min-height: 12rem;
+        resize: none;
+    }
+
+    .textareaMain {
+        position: relative;
+        width: 100%;
+    }
+
+    .copy {
+        font-size: 25px;
+        color: var(--text-inverse);
+        position: absolute;
+        bottom: 10px;
+        right: 5px;
+        cursor: pointer;
+        background: var(--theme);
+    }
+
+    .copyText {
+        position: absolute;
+        bottom: 32px;
+        right: -12.5px;
+        color: var(--text);
+        background: var(--selection);
+        border-radius: 30px;
+        padding: 1px 5px;
+        user-select: none;
+        pointer-events: none;
+        transform: translateY(10px);
+        z-index: 1;
+        opacity: 0;
+        transition: transform 100ms ease-out, opacity 100ms ease-out;
+    }
+
+    .openCopyText {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+    .chips {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        width: -webkit-fill-available;
+        background: var(--theme);
+        border-radius: 6px;
+        gap: 0.5rem;
+        padding: 0.5rem 1rem;
+        overflow: hidden;
+    }
+
+    .chip {
+        height: 32px;
+        color: white;
+        line-height: 32px;
+        padding: 0 12px;
+        border-radius: 16px;
+        background: var(--secondary);
+        margin-right: 5px;
+        display: inline-flex;
+        position: relative;
+        overflow: hidden;
+        padding-right: 40px;
+        max-width: calc(100% - 50px);
+        user-select: none;
+        outline: none;
+    }
+
+    .chips .input {
+        background: none;
+        border: 0;
+        color: black;
+        display: inline-block;
+        height: 32px;
+        outline: 0;
+        width: 100%;
+        flex: 1 0 150px;
+        font-size: 16px;
+    }
+
+    .chip .close {
+        cursor: pointer;
+        font-size: 16px;
+        line-height: 32px;
+        padding-left: 8px;
+        position: absolute;
+        background: var(--secondary);
+        padding-right: 16px;
+        right: 0;
+        border-radius: 0 16px 16px 0;
+    }
+
+    #resultCode, #buttonCode {
+        overflow: hidden;
+    }
