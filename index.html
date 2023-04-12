@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+<title>Bookmarklet Maker</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" href="/style.css">
+<script src="https://cdn.jsdelivr.net/gh/garfieldius/Browser-UglifyJS/build/uglifyjs.1.2.5.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/csso/dist/csso.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+<div id="websiteTitle" class="title"><div class="letter">B</div><div class="letter">o</div><div class="letter">o</div><div class="letter">k</div><div class="letter">m</div><div class="letter">a</div><div class="letter">r</div><div class="letter">k</div><div class="letter">l</div><div class="letter">e</div><div class="letter">t</div><div class="letter"> </div><div class="letter">M</div><div class="letter">a</div><div class="letter">k</div><div class="letter">e</div><div class="letter">r</div>
+</div>
+
+<div class="main">
+    <div class="maker">
+        <div class="sectionTitle">Editor</div>
+        <input spellcheck="false" id="buttonTitle" placeholder="Button title" class="text-input">
+        <input spellcheck="false" id="bookmarkletTitle" placeholder="Bookmarklet title (on the bookmarks bar)" class="text-input">
+        <div id="javascript" placeholder="Javascript URLs"></div>
+        <div id="css" placeholder="CSS URLs"></div>
+        <textarea spellcheck="false" id="code" placeholder="Javascript" class="textarea"></textarea>
+        <textarea spellcheck="false" id="style" placeholder="CSS" class="textarea"></textarea>
+    </div>
+    <div class="result">
+        <div class="sectionTitle">Result</div>
+        <div class="resultButton"><span id="resultButtonText" class="resultButtonText">Bookmarklet</span><a id="resultLink" class="resultLink">Bookmarklet</a></div>
+        <div class="textareaMain">
+            <textarea readonly spellcheck="false" id="resultCode" placeholder="Bookmarklet code" class="textarea"></textarea>
+            <div class="copyText">Copied!</div>
+            <div hidden onclick="copy(this)" class="copy material-symbols-outlined">content_copy</div>
+        </div>
+        <div class="textareaMain">
+            <textarea readonly spellcheck="false" id="buttonCode" placeholder="Button code" class="textarea"></textarea>
+            <div class="copyText">Copied!</div>
+            <div hidden onclick="copy(this)" class="copy material-symbols-outlined">content_copy</div>
+        </div>
+    </div>
+</div>
+
+<script src="/index.js"></script>
+</body>
+</html>
