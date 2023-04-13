@@ -1,4 +1,4 @@
-# [Bookmarklet Maker](https://bookmarklet-maker.netlify.app)
+# Bookmarklet Maker
 An easy way to create bookmarklets.
 
 ## How to Use
@@ -34,3 +34,6 @@ Run Javascript code like any bookmarklet.
 
 ### CSS
 Automatically add CSS style to the head of the page.
+
+## License
+Bookmarklet Maker uses the MIT license.
